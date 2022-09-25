@@ -1,0 +1,6 @@
+interview/model/TedTalkInformation$TedTalkInformationBuilder.class
+interview/model/TedTalkInformation.class
+interview/repository/TedTalkInformationRepository.class
+interview/model/AuthorInformation$AuthorInformationBuilder.class
+interview/model/AuthorInformation.class
+interview/repository/AuthorInformationRepository.class
