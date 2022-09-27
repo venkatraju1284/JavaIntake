@@ -6,12 +6,16 @@ create table author_information (
 
 create table tedtalk_information (
        id bigint not null,
+        created_by varchar(255),
+        created_date timestamp,
+        last_mod_date timestamp,
+        modified_by varchar(255),
         author varchar(255),
         author_interaction_date timestamp,
         likes bigint,
-        views bigint,
         title varchar(255),
         url_information varchar(255),
+        views bigint,
         primary key (id)
     );
 

@@ -5,9 +5,10 @@ This project is being developed as part of coding challenge given to [Venkat] (v
 ## Dependencies
 
 The following dependencies are required
-
+* Java 11 or higher
 * docker-compose version 1.28 or later
 * docker engine to build and run containers
+* On Windows machine Docker desktop would get correct docker dependencies. Be sure to enable TLS
 Optionally you could have a [docker](https://hub.docker.com) account to explore the dependencies.
 
 ## Usage
@@ -27,7 +28,7 @@ sh stopApplication.sh
 Application runs on port 8082 of localhost.
 [application](http://localhost:8080/) can be used once it is successfully started.
 
-### Swagger documentation
+### Swagger documentation(not complete)
 Swagger documentation can be accessed [here](http://localhost:8080/swagger-ui.html).
 Endpoint information can be accessed [here](http://localhost:8080/v3/api-docs)
 

@@ -12,7 +12,7 @@ import java.util.Date;
 @AllArgsConstructor
 @Builder
 @Table(name = "TEDTALK_INFORMATION")
-public class TedTalkInformation {
+public class TedTalkInformation extends Auditable<String> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -25,6 +25,7 @@ public class TedTalkInformation {
 //            name = "author_id",
 //            referencedColumnName = "author_id"
 //    )
+    @NonNull
     private String author;
 
     private Long likes;
@@ -36,18 +37,12 @@ public class TedTalkInformation {
     private Date authorInteractionDate;
 
     public TedTalkInformation(@NonNull final String title, @NonNull final String author, final Long likes, final Long views, final String urlInformation, final Date authorInteractionDate) {
-        if (title == null) {
-            throw new NullPointerException("title is marked non-null but is null");
-        } else if (author == null) {
-            throw new NullPointerException("author is marked non-null but is null");
-        } else {
-            this.title = title;
-            this.author = author;
-            this.likes = likes;
-            this.views = views;
-            this.urlInformation = urlInformation;
-            this.authorInteractionDate = authorInteractionDate;
-        }
+        this.title = title;
+        this.author = author;
+        this.likes = likes;
+        this.views = views;
+        this.urlInformation = urlInformation;
+        this.authorInteractionDate = authorInteractionDate;
     }
 
 }

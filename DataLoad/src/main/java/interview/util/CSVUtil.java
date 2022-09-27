@@ -37,7 +37,6 @@ public class CSVUtil {
             List<TedTalkInformation> tedTalkInformationList = new ArrayList<>();
 
             Iterable<CSVRecord> csvRecords = csvParser.getRecords();
-            Long id = new Long(0);
             for (CSVRecord csvRecord : csvRecords) {
                 enrich(tedTalkInformationList, csvRecord);
             }
